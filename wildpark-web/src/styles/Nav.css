@@ -1,0 +1,17 @@
+.navbar {
+    background-color: white !important;
+}
+
+.navbar a {
+    color: #800000 !important;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
