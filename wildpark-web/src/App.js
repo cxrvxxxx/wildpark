@@ -1,8 +1,14 @@
-import './App.css';
+import React from 'react';
 
-function App() {
+import './styles/App.css';
+
+import Nav from './components/Nav';
+
+const App = () => {
   return (
-    <h1>Hello world!</h1>
+    <>
+      <Nav />
+    </>
   );
 }
 
