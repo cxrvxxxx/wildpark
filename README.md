@@ -48,7 +48,7 @@ WildPark is a parking management solution that offers a simple and practical par
       </li>
       <li>
         Activate the virtual environment.
-        <pre><code>py -m venv .venv</code></pre>
+        <pre><code>.venv\scripts\activate.bat</code></pre>
       </li>
     </ol>
   </li>
