@@ -25,7 +25,7 @@ const Nav = () => {
     }, []);
 
     return (
-        <nav className="navbar navbar-expand-lg bg-dark fixed-top" color-on-scroll="400">
+        <nav className="navbar navbar-expand-lg bg-dark sticky-top shadow" color-on-scroll="400">
             <div className="container">
                 <div className="navbar-translate">
                     <a className="navbar-brand" href="#" rel="tooltip" data-placement="bottom">
