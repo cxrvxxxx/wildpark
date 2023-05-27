@@ -1,25 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button } from 'react-bootstrap'
 
 const LoginForm = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+    };
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <h4 className="mb-4"><b>Login</b></h4>
-            <div class="form-group mb-3">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" />
+            <div className="form-group mb-3">
+                <label htmlFor="email">Email address</label>
+                <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    value={email}
+                    placeholder="Enter email"
+                    onChange={(e) => setEmail(e.target.value)} />
             </div>
-            <div class="form-group mb-3">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password" />
+            <div className="form-group mb-3">
+                <label htmlFor="password">Password</label>
+                <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    value={password}
+                    placeholder="Password"
+                    onChange={(e) => setPassword(e.target.value)} />
             </div>
-            <div class="form-group mb-4">
-                <input type="checkbox" id="remember" name="remember" />
-                <label className="mx-2" for="remember">Remember me</label>
+            <div className="form-check-inline mb-4">
+                <input
+                    type="checkbox"
+                    className="form-check-input"
+                    id="remember"
+                    name="remember" />
+                <label className="form-check-label mx-2" htmlFor="remember">Remember me</label>
             </div>
             <div className="form-group mb-4">
-                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                <Button type="submit" variant="primary">Login</Button>
             </div>
-            <a className="d-inline" href="#">Don't have an account? Create one!</a>
+            <a className="d-inline">Don't have an account? Create one!</a>
         </form>
     );
 }
