@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../styles/Home.css';
 
-import LoginForm from './LoginForm';
+import LoginForm from '../components/LoginForm';
 
 const Home = () => {
     return (
