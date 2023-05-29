@@ -1,31 +1,32 @@
 import React, { useEffect } from 'react';
-import { Provider, useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
-import store from './store';
 import { showHome } from './actions/currentPage/actions';
+import { HOME_PAGE, SIGNUP_PAGE } from './actions/currentPage/actionTypes';
 
 import Nav from './components/Nav';
 import Home from './pages/Home';
 import About from './pages/About';
+import Signup from './pages/Signup';
 
 import './styles/App.css';
 
 const App = () => {
-  const dispatch = useDispatch();
+  const page = useSelector(state => state.page);
 
-  useEffect(() => {
-    dispatch(showHome());
-  }, []);
-
-  const currentPage = useSelector(state => state.currentPage);
+  const showPage = (page) => {
+    console.log(page.currentPage);
+    switch (page.currentPage) {
+      case HOME_PAGE: return <Home />
+      case SIGNUP_PAGE: return <Signup />
+    };
+  };
 
   return (
-    <Provider store={store}>
-      <div className='main container-fluid vh-100 overflow-auto px-0'>
-        <Nav />
-        {currentPage === 'HOME_PAGE' ? <Home /> : <About />}
-      </div>
-    </Provider>
+    <div className='main container-fluid vh-100 overflow-auto px-0'>
+      <Nav />
+      {showPage(page)}
+    </div>
   );
 }
 
