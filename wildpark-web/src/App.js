@@ -1,12 +1,14 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-import { showHome } from './actions/currentPage/actions';
-import { HOME_PAGE, SIGNUP_PAGE } from './actions/currentPage/actionTypes';
+import * as actionTypes from './actions/currentPage/actionTypes';
 
 import Nav from './components/Nav';
+
 import Home from './pages/Home';
 import About from './pages/About';
+import Support from './pages/Support';
+import Contact from './pages/Contact';
 import Signup from './pages/Signup';
 
 import './styles/App.css';
@@ -15,17 +17,21 @@ const App = () => {
   const page = useSelector(state => state.page);
 
   const showPage = (page) => {
-    console.log(page.currentPage);
     switch (page.currentPage) {
-      case HOME_PAGE: return <Home />
-      case SIGNUP_PAGE: return <Signup />
+      case actionTypes.HOME_PAGE: return <Home />
+      case actionTypes.SIGNUP_PAGE: return <Signup />
+      case actionTypes.ABOUT_PAGE: return <About />
+      case actionTypes.SUPPORT_PAGE: return <Support />
+      case actionTypes.CONTACT_PAGE: return <Contact />
     };
   };
 
   return (
-    <div className='main container-fluid vh-100 overflow-auto px-0'>
+    <div className="main container-fluid vh-100 overflow-auto px-0">
       <Nav />
-      {showPage(page)}
+      <div className="content container-fluid px-0 pt-5 h-100">
+        {showPage(page)}
+      </div>
     </div>
   );
 }

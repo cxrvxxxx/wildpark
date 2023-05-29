@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Home = () => {
+const About = () => {
     return (
-        <div className="home container d-flex justify-content-center align-items-center">
-
+        <div className="about container">
+            <h1>About</h1>
         </div>
     );
 }
 
-export default Home;
+export default About;
