@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap'
 
-import { showSignup } from "../actions/currentPage/actions";
+import { showSignupPage } from "../../../actions/currentPage/actions";
 
 const LoginForm = () => {
     const [email, setEmail] = useState('');
@@ -16,7 +16,9 @@ const LoginForm = () => {
     const dispatch = useDispatch();
 
     const handleSignupClick = (e) => {
-        dispatch(showSignup());
+        e.preventDefault();
+
+        dispatch(showSignupPage());
     };
 
     return (
@@ -53,7 +55,7 @@ const LoginForm = () => {
             <div className="form-group mb-4">
                 <Button type="submit" variant="primary">Login</Button>
             </div>
-            <a className="d-inline" onClick={handleSignupClick}>Don't have an account? Create one!</a>
+            <a className="d-inline" href="" onClick={handleSignupClick}>Don't have an account? Create one!</a>
         </form>
     );
 }

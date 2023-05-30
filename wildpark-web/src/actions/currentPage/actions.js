@@ -1,13 +1,31 @@
-import { HOME_PAGE, SIGNUP_PAGE } from './actionTypes';
+import * as actionTypes from './actionTypes';
 
-export const showHome = () => {
+export const showHomePage = () => {
     return {
-        type: HOME_PAGE
+        type: actionTypes.HOME_PAGE
     };
 };
 
-export const showSignup = () => {
+export const showSignupPage = () => {
     return {
-        type: SIGNUP_PAGE
+        type: actionTypes.SIGNUP_PAGE
     };
 };
+
+export const showAboutPage = () => {
+    return {
+        type: actionTypes.ABOUT_PAGE
+    };
+}
+
+export const showSupportPage = () => {
+    return {
+        type: actionTypes.SUPPORT_PAGE
+    };
+}
+
+export const showContactPage = () => {
+    return {
+        type: actionTypes.CONTACT_PAGE
+    };
+}
