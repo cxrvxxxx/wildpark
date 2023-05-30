@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap'
 
-import { showSignupPage } from "../actions/currentPage/actions";
+import { showSignupPage } from "../../../actions/currentPage/actions";
 
 const LoginForm = () => {
     const [email, setEmail] = useState('');
