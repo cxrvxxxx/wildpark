@@ -6,7 +6,7 @@ import '../styles/Signup.css';
 
 const Signup = () => {
     return (
-        <div className="signup container w-50 justify-content-center">
+        <div className="signup container w-50 justify-content-center shadow">
             <SignupForm />
         </div >
     );
