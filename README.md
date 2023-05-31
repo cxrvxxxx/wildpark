@@ -61,19 +61,8 @@ WildPark is a parking management solution that offers a simple and practical par
     <pre><code>pip install django-cors-headers</code></pre>
   </li>
   <li>
-    To install ReactJs dependencies, navigate to the 'wildpark-web' folder.
-  </li>
-  <li>
-    Install axios.
-    <pre><code>npm install axios</code></pre>
-  </li>
-  <li>
-    Install bootstrap.
-    <pre><code>npm install bootstrap</code></pre>
-  </li>
-  <li>
-    Install react-bootstrap.
-    <pre><code>npm install react-bootstrap</code></pre>
+    To install ReactJs dependencies, navigate to the 'wildpark-web' folder and run the command:
+    <pre><code>npm i</code></pre>
   </li>
 </ol>
     
